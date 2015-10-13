@@ -1,0 +1,16 @@
+{
+  "name": "o-test-component",
+  "dependencies": {
+    "o-xhr": "~1.1.0"
+  },
+  "main": [
+    "main.scss",
+    "main.js"
+  ],
+  "ignore": [
+    "examples",
+    "test",
+    ".gitignore"
+  ],
+  "license": "MIT"
+}

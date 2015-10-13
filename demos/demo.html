@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="o-hoverable-on o-hoverable-on">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>o-test-component: demo demo</title>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=default"></script>
+	<style>body { margin: 0; } .demo-js .o--if-nojs { display: none; }</style>
+	<script>(function(d) { d.className = d.className + ' demo-js'; })(document.documentElement);</script>
+	<link rel="stylesheet" href="/bundles/css?modules=o-test-component:/demos/src/demo.scss" />
+</head>
+<body>
+<div class="o-input">
+
+<span> Token: </span>
+   <textarea rows="5" type="text" id="htmlToken" value="xxx" checked> </textarea>
+   <span> Pi Id: </span>
+   <input type="text" id="htmlPIid" value="xxx">
+
+</div>
+<br>
+   <br>
+<div style="clear: both;"></div>
+<h1>MyProfile</h1>
+<hr/>
+
+<div class="o-profile__ct">
+  <div class="o-profile__left-column">
+    <h3>My Profile</h3>
+  </div>
+  <div class="o-profile__right-column">
+    <h4 id="myEmail">I don't know this guy</h4>
+    <hr/>
+    <div class="o-profile__detail-ct">
+      <div class="o-profile__detail-avatar">
+        <b>Profile</b><br/>
+        <img id="myAvatar" src="http://jlls.info/statics/tp-avatar.gif" />
+      </div>
+      <div class="o-profile__detail-table">
+
+        <table>
+
+         <tr>
+           <td width="150">Name</td>
+           <td id=myName>name</td>
+         </tr>
+         <tr>
+           <td>Email</td>
+           <td id="myEmail2">name</td>
+         </tr>
+         <tr>
+           <td>Bio</td>
+           <td id='myBio'>name</td>
+         </tr>
+        </table>
+
+      </div>
+      <div class="o-profile__detail-edit">
+        <a href="#">Edit</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="/bundles/js?modules=o-test-component:/demos/src/demo.js"></script>
+<script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>
+</body>
+</html>

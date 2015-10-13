@@ -1,0 +1,13 @@
+////
+/// @group o-test-component
+/// @link http://registry.origami.ft.com/components/o-test-component
+////
+
+/// Hello world
+///
+/// @param {String} $who [world]
+@mixin oTestComponentHello($who: world) {
+	.foo {
+		content: 'Hello, #{$who}!';
+	}
+}
