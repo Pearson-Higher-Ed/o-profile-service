@@ -27,12 +27,30 @@ ProfileService.prototype.getProfile = function(id, callback){
 					"Accept": "application/json"
 			}
 		});  // end xhr
+	}
+
+ProfileService.prototype.setProfile= function(id, data, callback){
+	callback = callback || noop;
+	console.log("I would like to write to id:" + id +" with body:"+ data)
+	new Xhr({
+
+			url: this.url+"/userprofiles/"+id,
+			method:"PUT",
+			data:data,
+			onSuccess: function(request){
+				callback(null, request.responseText);
+			},
+			onError: function(err){
+				callback(err, null);
+			},
+			headers:{
+				"x-authorization": this.token,
+					"Content-Type": "application/json",
+					"Accept": "application/json"
+			}
+		});  // end xhr
 	};
-// profileService.setProfile(id, data, callback){
-//
-//
-//
-// }
+
 //
 
 

@@ -1,7 +1,7 @@
 {
-  "name": "o-test-component",
+  "name": "o-profile-view",
   "dependencies": {
-    "o-xhr": "~1.1.0"
+    "o-profile-service": "~1.0.0"
   },
   "main": [
     "main.scss",

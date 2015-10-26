@@ -30,6 +30,15 @@ document.addEventListener("click", function(){
 	service.getProfile(piid,callback);
 });
 
+function updateCallback(err,text){
+	if(err != null){
+		console.error("There has been an error setting profile: "+ err.responseText)
+		return;
+
+
+	}
+	console.log("sucesss");
+}
 
 function callback(err, text){
 	if(err != null){
@@ -51,4 +60,7 @@ function callback(err, text){
 	document.getElementById('myEmail2').textContent= profileData.email
 	document.getElementById('myBio').textContent= profileData.aboutMini
 	document.getElementById('myAvatar').src = profileData.avatar
+
+	profileData.aboutMini += "X";// add an X to the bio just to watch the update work
+	service.setProfile(profileData.id,JSON.stringify(profileData), updateCallback);
 }
