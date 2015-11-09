@@ -24,10 +24,13 @@ document.addEventListener("click", function(){
 
 	var token = document.getElementById('htmlToken').value;
 	var piid = document.getElementById('htmlPIid').value
+	var avatarFile =document.getElementById("avatarUpload").files[0];
 	service.token = token;
 	console.log("myToken is: "+ token)
-		console.log("pd is: "+ piid)
+	console.log("pd is: "+ piid)
+	console.log("file is: "+ avatarFile.name)
 	service.getProfile(piid,callback);
+	service.setAvatar(piid,avatarFile, updateCallback);
 });
 
 function updateCallback(err,text){

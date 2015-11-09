@@ -51,8 +51,30 @@ ProfileService.prototype.setProfile= function(id, data, callback){
 		});  // end xhr
 	};
 
-//
+	ProfileService.prototype.setAvatar = function(id, file, callback){
+		callback = callback || noop;
+		console.log("I would like to write an avatar to id:" + id +" with name:"+ file.name);
 
+				var formData = new FormData();
+				formData.append("myFile", file );
+
+		new Xhr({
+
+				url: this.url+"/userprofiles/"+id +"/avatar",
+				method:"POST",
+				data:formData,
+				onSuccess: function(request){
+					callback(null, request.responseText);
+				},
+				onError: function(err){
+					callback(err, null);
+				},
+				headers:{
+					"x-authorization": this.token, 
+						"Accept": "application/json"
+				}
+			});  // end xhr
+		};
 
 
 
