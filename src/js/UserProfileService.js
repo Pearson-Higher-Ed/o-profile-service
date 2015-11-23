@@ -55,7 +55,7 @@ ProfileService.prototype.setProfile= function(id, data, callback){
 		callback = callback || noop;
 		console.log("I would like to write an avatar to id:" + id +" with name:"+ file.name);
 
-				var formData = new FormData();
+				const formData = new FormData();
 				formData.append("myFile", file );
 
 		new Xhr({
@@ -70,7 +70,7 @@ ProfileService.prototype.setProfile= function(id, data, callback){
 					callback(err, null);
 				},
 				headers:{
-					"x-authorization": this.token, 
+					"x-authorization": this.token,
 						"Accept": "application/json"
 				}
 			});  // end xhr

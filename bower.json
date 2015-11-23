@@ -1,7 +1,7 @@
 {
-  "name": "o-profile-view",
+  "name": "o-profile-service",
   "dependencies": {
-    "o-profile-service": "~1.0.0"
+    "o-xhr": "~1.0.0"
   },
   "main": [
     "main.scss",

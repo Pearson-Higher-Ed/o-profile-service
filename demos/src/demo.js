@@ -1,7 +1,7 @@
 /*global require*/
-var component = require('../../main');
+const component = require('../../main');
 
-var UProfileService = component.UserProfileService;
+const UProfileService = component.UserProfileService;
 
 console.log(UProfileService);
 
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("click", function(){
 
-	var token = document.getElementById('htmlToken').value;
-	var piid = document.getElementById('htmlPIid').value
-	var avatarFile =document.getElementById("avatarUpload").files[0];
+	const token = document.getElementById('htmlToken').value;
+	const piid = document.getElementById('htmlPIid').value
+	const avatarFile =document.getElementById("avatarUpload").files[0];
 	service.token = token;
 	console.log("myToken is: "+ token)
 	console.log("pd is: "+ piid)
@@ -34,21 +34,19 @@ document.addEventListener("click", function(){
 });
 
 function updateCallback(err,text){
-	if(err != null){
+	if(err !== null){
 		console.error("There has been an error setting profile: "+ err.responseText)
 		return;
-
-
 	}
-	console.log("sucesss");
+	console.log("sucesss: "+ text);
 }
 
 function callback(err, text){
-	if(err != null){
+	if(err !== null){
 		console.error("There has been an error getting profile: "+ err.responseText)
 		return;
 	}
-	var profileData = {};
+	let profileData = {};
 	try {
 		profileData = JSON.parse(text);
 	}

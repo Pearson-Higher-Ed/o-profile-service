@@ -1,13 +1,14 @@
 /*global describe, it*/
-'use strict';
+// 'use strict';
 
-var expect = require('expect.js');
+const expect = require('expect.js');
 
-var foo = require('./../src/js/foo');
+const Profile = require('./../src/js/UserProfileService');
 
-describe('Foo', function() {
+describe('Profile Init', function() {
+  it('should initialize', function() {
+    const prof = new Profile();
+    expect(prof).to.not.be(null);
+  });
 
-	it('should initialise', function() {
-		expect(foo()).to.be('bar');
-	});
 });
