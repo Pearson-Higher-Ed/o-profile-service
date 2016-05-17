@@ -1,5 +1,5 @@
 
-const Xhr = require("o-xhr")
+const Xhr = require("o-xhr/main")
 
 
 function ProfileService(url, token){
